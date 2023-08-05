@@ -1,7 +1,7 @@
 # Active Directory Homelab Project
 
 ![Active Directory Homelab](https://i.imgur.com/rDYFHff.png)
-<br><br><br>
+<br><br>
 ![Active Directory Homelab](https://i.imgur.com/hGfReqr.png)
 
 
@@ -27,11 +27,13 @@ The architecture of the Active Directory Homelab has the following componets:
 
 - **User List Text File:** This simple yet effective file serves as a repository for user information, facilitating efficient user setup and management.
 
-- **Python Script:** With its scripting prowess, Python adds a layer of automation and customization, making user creation smoother and more dynamic.
+- **Python Script:** After careful research and lessons, I created a Python script that adds a layer of automation and customization, making user creation smoother and more dynamic.
 
 - **Group Policy Object:** A powerful tool for enforcing policies across the network, Group Policy Objects help maintain consistent settings, security, and access controls.
 
 Collectively, these tools and architectural elements culminate in an environment where virtual machines interact harmoniously, mirroring the intricacies of a corporate ecosystem. Through exploration and manipulation, this lab offers an immersive platform to experiment, learn, and finesse the art of network management and system administration.
+
+
 ## Architecture Before Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/j9rsRIH.png)
 
