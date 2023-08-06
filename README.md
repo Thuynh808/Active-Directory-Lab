@@ -34,3 +34,69 @@ The architecture of the Active Directory Homelab has the following componets:
 Collectively, these tools and architectural elements culminate in an environment where virtual machines interact harmoniously, mirroring the intricacies of a corporate ecosystem. Through exploration and manipulation, this lab offers an immersive platform to experiment, learn, and finesse the art of network management and system administration.
 
 
+<details>
+  <summary>Section 1: NETWORK INTERFACE CARD(NIC) CONFIGURATIONS</summary>
+  
+  Here's the introduction to your project. You can write a brief overview or description here.
+
+  ![Image 1](https://i.imgur.com/rDYFHff.png)
+</details>
+
+<details>
+  <summary>Section 2: INSTALL ACTIVE DIRECTORY DOMAIN SERVICES</summary>
+  
+  Describe the architecture components you mentioned earlier in this section.
+
+  ![Image 2](images/image2.jpg)
+</details>
+
+<details>
+  <summary>Section 3: CREATE USERS AND GROUPS</summary>
+  
+  Describe the architecture components you mentioned earlier in this section.
+
+  ![Image 2](images/image2.jpg)
+</details>
+
+<details>
+  <summary>Section 4: INSTALL & CONFIGURE DHCP </summary>
+  
+  Describe the process of setting up the Windows Server's internal NIC here.
+
+  ![Image 3](images/image3.jpg)
+</details>
+
+<details>
+  <summary>Section 5: INSTALL & CONFIGURE RAS/NAT</summary>
+  
+  Here's the introduction to your project. You can write a brief overview or description here.
+
+  ![Image 1](https://i.imgur.com/rDYFHff.png)
+</details>
+
+<details>
+  <summary>Section 6: CREATE AND RUN PYTHON SCRIPT</summary>
+  
+  Describe the architecture components you mentioned earlier in this section.
+
+  ![Image 2](images/image2.jpg)
+</details>
+
+<details>
+  <summary>Section 7: GROUP POLICY CONFIGURATIONS</summary>
+  
+  Describe the architecture components you mentioned earlier in this section.
+
+  ![Image 2](images/image2.jpg)
+</details>
+
+<details>
+  <summary>Section 8: CONFIRM FUNCTIONALITY </summary>
+  
+  Describe the process of setting up the Windows Server's internal NIC here.
+
+  ![Image 3](images/image3.jpg)
+</details>
+
+
+
