@@ -68,28 +68,34 @@ Collectively, these tools and architectural elements culminate in an environment
   <summary><h2><b>Section 2: INSTALL ACTIVE DIRECTORY DOMAIN SERVICES</b></h2></summary>
   <br><br>
   
-  In this section, you'll learn how to install Active Directory Domain Services (AD DS) on Windows Server 2019.<br><br>
+  In this section, we'll be installing Active Directory Domain Services (AD DS) on Windows Server 2019.<br><br>
   
-  ![Image 2](images/image2.jpg)
   
   **Step 1: Install AD DS:**
   - Open Server Manager.
   - Click "Manage" > "Add Roles and Features."
   - Choose "Role-based or feature-based installation" and click "Next."
-  - Select your local server and click "Next."
+  - Select the local server and click "Next."
   - Check "Active Directory Domain Services" and proceed.
-  - Click through until you reach the installation summary, then click "Install."
+  - Click through until you reach the installation summary, then click "Install."<br><br>
+
+  ![Image 2](https://i.imgur.com/L2OqS5J.png)
+<br><br>
   
   **Step 2: Promote Server to Domain Controller:**
   - After installation, click "Promote this server to a domain controller."
   - Choose "Add a new forest" and set domain details.
+    - Server: DC
+    - Operation System: Windows Server 2019
+    - Domain Name: Streetrack.com
   - Set a Directory Services Restore Mode (DSRM) password.
+  - DNS can be left alone for automatic configuration.
   - Complete the wizard and let the server restart.
+<br><br>
+  ![Image 3](https://i.imgur.com/2TLFD6o.png)
+<br><br>
   
-  **Step 3: Installation Completed:**
-  - After the restart, log in as a domain admin.
-  
-  Congratulations! You've successfully installed and configured Active Directory Domain Services on your Windows Server 2019.
+  Awesome! We've successfully installed and configured Active Directory Domain Services on our Windows Server 2019.
 </details>
 
 
@@ -98,7 +104,7 @@ Collectively, these tools and architectural elements culminate in an environment
   
   Describe the architecture components you mentioned earlier in this section.
 
-  ![Image 2](images/image2.jpg)
+  ![Image 3](https://i.imgur.com/2TLFD6o.png)
 </details>
 
 <details>
