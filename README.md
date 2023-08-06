@@ -34,7 +34,7 @@ The architecture of the Active Directory Homelab has the following componets:
 Collectively, these tools and architectural elements culminate in an environment where virtual machines interact harmoniously, mirroring the intricacies of a corporate ecosystem. Through exploration and manipulation, this lab offers an immersive platform to experiment, learn, and finesse the art of network management and system administration.
 
 <details>
-  <summary>Section 1: NETWORK INTERFACE CARD (NIC) CONFIGURATIONS</summary>
+  <summary><h2><b>Section 1: NETWORK INTERFACE CARD (NIC) CONFIGURATIONS</b></h2></summary>
   <br> <br>
   In this section, I'll be configuring the 2 NICs on the Windows Server 2019.<br><br>
   
@@ -61,16 +61,37 @@ Collectively, these tools and architectural elements culminate in an environment
     - **Explanation:** NIC 1 with IP "10.2.22.1" connects devices inside our network. We don't set a gateway to keep this network separate from the internet.
   - NIC 2: Enables connection to the internet.
     - **Explanation:** NIC 2 gets settings from the network, letting us connect online easily.
-
+   
 </details>
 
 <details>
-  <summary>Section 2: INSTALL ACTIVE DIRECTORY DOMAIN SERVICES</summary>
+  <summary><h2><b>Section 2: INSTALL ACTIVE DIRECTORY DOMAIN SERVICES</b></h2></summary>
+  <br><br>
   
-  Describe the architecture components you mentioned earlier in this section.
-
+  In this section, you'll learn how to install Active Directory Domain Services (AD DS) on Windows Server 2019.<br><br>
+  
   ![Image 2](images/image2.jpg)
+  
+  **Step 1: Install AD DS:**
+  - Open Server Manager.
+  - Click "Manage" > "Add Roles and Features."
+  - Choose "Role-based or feature-based installation" and click "Next."
+  - Select your local server and click "Next."
+  - Check "Active Directory Domain Services" and proceed.
+  - Click through until you reach the installation summary, then click "Install."
+  
+  **Step 2: Promote Server to Domain Controller:**
+  - After installation, click "Promote this server to a domain controller."
+  - Choose "Add a new forest" and set domain details.
+  - Set a Directory Services Restore Mode (DSRM) password.
+  - Complete the wizard and let the server restart.
+  
+  **Step 3: Installation Completed:**
+  - After the restart, log in as a domain admin.
+  
+  Congratulations! You've successfully installed and configured Active Directory Domain Services on your Windows Server 2019.
 </details>
+
 
 <details>
   <summary>Section 3: CREATE USERS AND GROUPS</summary>
