@@ -33,13 +33,35 @@ The architecture of the Active Directory Homelab has the following componets:
 
 Collectively, these tools and architectural elements culminate in an environment where virtual machines interact harmoniously, mirroring the intricacies of a corporate ecosystem. Through exploration and manipulation, this lab offers an immersive platform to experiment, learn, and finesse the art of network management and system administration.
 
-
 <details>
-  <summary>Section 1: NETWORK INTERFACE CARD(NIC) CONFIGURATIONS</summary>
+  <summary>Section 1: NETWORK INTERFACE CARD (NIC) CONFIGURATIONS</summary>
+  <br> <br>
+  In this section, I'll be configuring the 2 NICs on the Windows Server 2019.<br><br>
   
-  Here's the introduction to your project. You can write a brief overview or description here.
+  ![Image 1](https://i.imgur.com/wDilWI5.png)
+  
+  **Step 1: Access Network Settings:**
+  - Open "Network Connections" from the Control Panel
+  
+  **Step 2: Identify NICs:**
+  - Identify the two NICs and renaming them to "Internet" and "Internal"
+  
+  **Step 3: Assign IP Addresses and Configure DNS:**
+  - For NIC 1 (Internal):
+    - IP Address: 10.2.22.1
+    - Subnet Mask: 255.255.255.0
+    - Default Gateway: (empty)
+    - Preferred DNS Server: 127.0.0.1
+  - For NIC 2 (Internet):
+    - Obtain IP settings automatically (DHCP) for internet access
+    - Obtain DNS server address automatically 
+  
+  **Reasons for the Configuration:**
+  - NIC 1: Provides a gateway for the internal network.
+    - **Explanation:** NIC 1 with IP "10.2.22.1" connects devices inside our network. We don't set a gateway to keep this network separate from the internet.
+  - NIC 2: Enables connection to the internet.
+    - **Explanation:** NIC 2 gets settings from the network, letting us connect online easily.
 
-  ![Image 1](https://i.imgur.com/rDYFHff.png)
 </details>
 
 <details>
