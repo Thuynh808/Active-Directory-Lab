@@ -103,7 +103,7 @@ Collectively, these tools and architectural elements culminate in an environment
 </details>
 
 <details>
-  <summary><h2><b>Section 3: MANAGING USERS AND ORGANIZATIONAL UNITS (OUs)</b></h2></summary>
+  <summary><h2><b>Section 3: CREATING USERS AND ORGANIZATIONAL UNITS (OUs)</b></h2></summary>
   <br><br>
   
   Here, we'll be exploring how to efficiently manage users by creating Organizational Units (OUs), adding users, and assigning administrative privileges.<br><br>
@@ -158,7 +158,7 @@ Collectively, these tools and architectural elements culminate in an environment
   **Step 1: Open Server Manager:**
   - Launch "Server Manager" on the Windows Server 2019.<br><br>
   
-  ![Image 10](images/image4.jpg)<br><br>
+  ![Image 10](https://i.imgur.com/0yCKtnX.png)<br><br>
   
   **Step 2: Add DHCP Role:**
   - Click "Manage" > "Add Roles and Features."
@@ -166,14 +166,14 @@ Collectively, these tools and architectural elements culminate in an environment
   - Choose the local server(DC) and proceed.
   - Check "DHCP Server" and complete the installation wizard.<br><br>
   
-  ![Image 10](images/image4.jpg)<br><br>
+  ![Image 11](https://i.imgur.com/HUQbLnu.png)<br><br>
 
   **Step 3: Configure DHCP:**
   - After installation, open "DHCP Manager" from "Administrative Tools."
   - Right-click on our server name and choose "Configure DHCP."
   - Follow the wizard, selecting the appropriate network connection.<br><br>
   
-  ![Image 10](images/image4.jpg)<br><br>
+  ![Image 12](https://i.imgur.com/A4WWdGF.png)<br><br>
   
   **Step 4: Create DHCP Scope:**
   - In "DHCP Manager," right-click on "IPv4" and choose "New Scope."
@@ -187,18 +187,10 @@ Collectively, these tools and architectural elements culminate in an environment
     - DNS: 127.0.0.1
     - Lease Duration: 8 days<br><br>
   
-  ![Image 10](images/image4.jpg)<br><br>
-  
+  ![Image 13](https://i.imgur.com/5n4O0CU.png)<br><br>
+
   **Step 5: Authorize DHCP Server:**
   - If needed, we'll right-click on the server name in "DHCP Manager" and choose "Authorize."<br><br>
-  
-  ![Image 10](images/image4.jpg)<br><br>
-  
-  **Step 6: Test DHCP Assignment:**
-  - On a client machine, ensure it's set to obtain an IP address automatically.
-  - Connect the client to the network and verify IP assignment.<br><br>
-  
-  ![Image 10](images/image4.jpg)<br><br>
   
   Great! We've successfully installed and configured DHCP, automating IP address assignment to devices within our network.
 </details>
