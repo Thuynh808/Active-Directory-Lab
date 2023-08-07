@@ -13,25 +13,25 @@ Welcome to my dynamic Homelab project, where I'll be crafting a virtual environm
 The Active Directory Homelab architecture includes:
 
 
-- **VirtualBox:** The foundation for creating and managing virtual machines, facilitating real-world scenario simulation.
+- **VirtualBox:** The foundation for creating and managing virtual machines, facilitating real-world scenario simulation
 
-- **Windows Server 2019:** As the Domain Controller, it manages users, devices, and policies, forming the core of Active Directory Domain Services.
+- **Windows Server 2019:** As the Domain Controller, it manages users, devices, and policies, forming the core of Active Directory Domain Services
 
-- **Windows 10:** Representing an employee workstation, it provides insights into the corporate end-user experience.
+- **Windows 10:** Representing an employee workstation, it provides insights into the corporate end-user experience
 
-- **Network Interfaces:** Enabling communication, with one for internet access and another for internal network interaction.
+- **Network Interfaces:** Enabling communication, with one for internet access and another for internal network interaction
 
-- **Active Directory Domain Services:** Crucial for user and network organization, structuring users, computers, and resources coherently.
+- **Active Directory Domain Services:** Crucial for user and network organization, structuring users, computers, and resources coherently
 
-- **DHCP:** Automates IP address assignment, streamlining network configuration.
+- **DHCP:** Automates IP address assignment, streamlining network configuration
 
-- **RAS/NAT:** Facilitates seamless internal-external network connectivity, including VPN access.
+- **RAS/NAT:** Facilitates seamless internal-external network connectivity
 
-- **User List Text File:** Stores user info, aiding efficient user setup and management.
+- **User List Text File:** Stores user info, aiding efficient user setup and management
 
-- **Python Script:** Adds automation and customization, enhancing user creation.
+- **Python Script:** Adds automation and customization, enhancing user creation
 
-- **Group Policy Object:** Enforces network-wide policies, maintaining settings, security, and access controls.
+- **Group Policy Object:** Enforces network-wide policies, maintaining settings, security, and access controls
 
 
 Collectively, these tools and architectural elements culminate in an environment where virtual machines interact harmoniously, mirroring the intricacies of a corporate ecosystem. Through exploration and manipulation, this lab offers an immersive platform to experiment, learn, and finesse the art of network management and system administration.
@@ -195,14 +195,41 @@ Collectively, these tools and architectural elements culminate in an environment
   Great! We've successfully installed and configured DHCP, automating IP address assignment to devices within our network.
 </details>
 
-
 <details>
-  <summary>Section 5: INSTALL & CONFIGURE RAS/NAT</summary>
+  <summary><h2><b>Section 5: INSTALL & CONFIGURE NETWORK ADDRESS TRANSLATION (NAT)</b></h2></summary>
+  <br><br>
   
-  Here's the introduction to your project. You can write a brief overview or description here.
-
-  ![Image 1](https://i.imgur.com/rDYFHff.png)
+  In this section, we'll focus on installing and configuring Network Address Translation (NAT), a technique that enables devices within our internal network to access the external internet while using a single public IP address.<br><br>
+  
+  ![Image 5](images/image5.jpg)
+  
+  **Step 1: Open Server Manager:**
+  - Launch "Server Manager" on the Windows Server 2019
+  
+  **Step 2: Configure NAT:**
+  - After installation, open "Routing and Remote Access" from "Administrative Tools"
+  - Right-click on our server name and choose "Configure and Enable Routing and Remote Access"
+  - Follow the wizard, selecting "Network address translation (NAT)"
+  - Select the external network interface(Internet) for public connection
+  
+  **Step 3: Enable NAT and Join Domain:**
+  - In the "NAT" section, right-click on the server name and choose "NAT" > "Enable."
+  - On the client VM (Windows 10), log in using the domain admin "thuynh"
+  - Join the domain using these steps:
+    - Open "System Properties" on the client VM
+    - Go to the "Computer Name" tab and click "Change"
+    - Choose "Domain" and enter our domain name "Streetrack.com"
+    - Provide the "thuynh" credentials to join the domain.
+  
+  **Step 4: Test Connectivity:**
+  - On the client VM, open a Command Prompt.
+  - Use the following commands to verify network settings and connectivity:
+    - Run `ipconfig` to check the assigned IP configuration.
+    - Run `ping google.com` to test internet connectivity.
+  
+  YES! We've successfully configured Network Address Translation (NAT), joined the domain using "thuynh" credentials, and verified internet and internal network connectivity on the client VM.
 </details>
+
 
 <details>
   <summary>Section 6: CREATE AND RUN PYTHON SCRIPT</summary>
