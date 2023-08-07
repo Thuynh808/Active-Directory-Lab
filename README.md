@@ -2,7 +2,7 @@
 
 ![Active Directory Homelab](https://i.imgur.com/rDYFHff.png)
 <br><br>
-![Active Directory Homelab](https://i.imgur.com/hGfReqr.png)
+![Active Directory Homelab2](https://i.imgur.com/hGfReqr.png)
 
 
 ## Introduction
@@ -108,7 +108,7 @@ Collectively, these tools and architectural elements culminate in an environment
   
   Here, we'll be exploring how to efficiently manage users by creating Organizational Units (OUs), adding users, and assigning administrative privileges.<br><br>
   
-  ![Image 3](https://i.imgur.com/eGgqXno.png)
+  ![Image 4](https://i.imgur.com/eGgqXno.png)
 <br><br>
   
   **Step 1: Create Organizational Units (OUs):**
@@ -116,7 +116,7 @@ Collectively, these tools and architectural elements culminate in an environment
   - Right-click on the domain name and choose "New" > "Organizational Unit."
   - Name the OU "_ADMINS" and "_USERS" respectively.<br><br>
 
-  ![Image 3](https://i.imgur.com/nBDdKb0.png)
+  ![Image 5](https://i.imgur.com/nBDdKb0.png)
 <br><br>
   
   **Step 2: Create User Account:**
@@ -126,37 +126,83 @@ Collectively, these tools and architectural elements culminate in an environment
     - Last Name: Huynh
     - User Logon Name: thuynh<br><br>
       
-  ![Image 3](https://i.imgur.com/kozipGr.png)
+  ![Image 6](https://i.imgur.com/kozipGr.png)
 <br><br>
 
   **Step 3: Add User to Domain Admins Group:**
-  - Locate the user you just created and right-click.
+  - Locate the user we just created and right-click.
   - Select "Properties."
   - In the "Member Of" tab, click "Add."
   - Enter "Domain Admins" and click "Check Names."
   - Click "OK" to add the user to the "Domain Admins" group.<br><br>
   
-  ![Image 3](https://i.imgur.com/TA0MoBV.png)<br><br>
+  ![Image 7](https://i.imgur.com/TA0MoBV.png)<br><br>
   
-  ![Image 3](https://i.imgur.com/bgI8oMM.png)<br><br>
+  ![Image 8](https://i.imgur.com/bgI8oMM.png)<br><br>
   
   **Step 4: Verify User and OU Creation:**
   - Refresh Active Directory by restarting and log in with new Admin User credentials to confirm User and OU Creation.<br><br>
   
-  ![Image 3](https://i.imgur.com/DLMH7ra.png)
+  ![Image 9](https://i.imgur.com/DLMH7ra.png)
 <br><br>
   
   Yay! we've successfully created Organizational Units (OUs), added a user to the "_ADMINS" OU, and granted administrative privileges by adding our user to the "Domain Admins" group.
 </details>
 
-
 <details>
-  <summary>Section 4: INSTALL & CONFIGURE DHCP </summary>
+  <summary><h2><b>Section 4: INSTALL & CONFIGURE DHCP</b></h2></summary>
+  <br><br>
   
-  Describe the process of setting up the Windows Server's internal NIC here.
+  In this section, we'll explore the process of installing and configuring the Dynamic Host Configuration Protocol (DHCP) to automate IP address assignment within our network.
+  
+  **Step 1: Open Server Manager:**
+  - Launch "Server Manager" on the Windows Server 2019.<br><br>
+  
+  ![Image 10](images/image4.jpg)<br><br>
+  
+  **Step 2: Add DHCP Role:**
+  - Click "Manage" > "Add Roles and Features."
+  - Select "Role-based or feature-based installation" and click "Next."
+  - Choose the local server(DC) and proceed.
+  - Check "DHCP Server" and complete the installation wizard.<br><br>
+  
+  ![Image 10](images/image4.jpg)<br><br>
 
-  ![Image 3](images/image3.jpg)
+  **Step 3: Configure DHCP:**
+  - After installation, open "DHCP Manager" from "Administrative Tools."
+  - Right-click on our server name and choose "Configure DHCP."
+  - Follow the wizard, selecting the appropriate network connection.<br><br>
+  
+  ![Image 10](images/image4.jpg)<br><br>
+  
+  **Step 4: Create DHCP Scope:**
+  - In "DHCP Manager," right-click on "IPv4" and choose "New Scope."
+  - Set the scope name, IP range, subnet mask, default gateway, DNS servers, and lease duration:
+    - Scope Name: 10.2.22.100-200
+    - Start IP Address: 10.2.22.100
+    - End IP Address: 10.2.22.200
+    - Length: 24
+    - Subnet Mask: 255.255.255.0
+    - Default Gateway: 10.2.22.1
+    - DNS: 127.0.0.1
+    - Lease Duration: 8 days<br><br>
+  
+  ![Image 10](images/image4.jpg)<br><br>
+  
+  **Step 5: Authorize DHCP Server:**
+  - If needed, right-click on your server name in "DHCP Manager" and choose "Authorize."<br><br>
+  
+  ![Image 10](images/image4.jpg)<br><br>
+  
+  **Step 6: Test DHCP Assignment:**
+  - On a client machine, ensure it's set to obtain an IP address automatically.
+  - Connect the client to the network and verify IP assignment.<br><br>
+  
+  ![Image 10](images/image4.jpg)<br><br>
+  
+  Great! We've successfully installed and configured DHCP, automating IP address assignment to devices within our network.
 </details>
+
 
 <details>
   <summary>Section 5: INSTALL & CONFIGURE RAS/NAT</summary>
