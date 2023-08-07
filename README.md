@@ -201,52 +201,59 @@ Collectively, these tools and architectural elements culminate in an environment
   
   In this section, we'll focus on installing and configuring Network Address Translation (NAT), a technique that enables devices within our internal network to access the external internet while using a single public IP address.<br><br>
   
-  ![Image 5](images/image5.jpg)<br><br>
+  ![Image 14](https://i.imgur.com/t5Vyt6T.png)<br><br>
 
   **Step 1: Open Server Manager:**
   - Launch "Server Manager" on the Windows Server 2019
   - Click "Manage" > "Add Roles and Features."
   - Select "Role-based or feature-based installation" and click "Next."
   - Choose the local server(DC) and proceed.
-  - Check "Remote Access" and complete the installation wizard.<br><br>
+  - Check "Remote Access" and continue.
+  - Check "Routing" and finsih the installation wiazard<br><br>
 
-  ![Image 5](images/image5.jpg)<br><br>
+  ![Image 15](https://i.imgur.com/M5CBamo.png)<br><br>
+
+  ![Image 16](https://i.imgur.com/9i7EKSO.png)<br><br>
   
   **Step 2: Configure NAT:**
   - After installation, open "Routing and Remote Access" from "Administrative Tools"
   - Right-click on our server name and choose "Configure and Enable Routing and Remote Access"<br><br>
 
-  ![Image 5](images/image5.jpg)<br><br>
+  ![Image 17](https://i.imgur.com/zoDo8Aj.png)<br><br>
   
   - Follow the wizard, selecting "Network address translation (NAT)"
   - Select the external network interface(Internet) for public connection<br><br>
   
-  ![Image 5](images/image5.jpg)<br><br>
+  ![Image 18](https://i.imgur.com/nMT8je3.png)<br><br>
 
-  ![Image 5](images/image5.jpg)<br><br>
-
-  ![Image 5](images/image5.jpg)<br><br>
+  - In the "NAT" section, right-click on the server name and choose "NAT" > "Enable."<br><br>
   
-  **Step 3: Enable NAT and Join Domain:**
-  - In the "NAT" section, right-click on the server name and choose "NAT" > "Enable."
-  - On the client VM (Windows 10), log in using the domain admin "thuynh"
-  - Join the domain using these steps:
-    - Open "System Properties" on the client VM
-    - Go to the "Computer Name" tab and click "Change"
-    - Choose "Domain" and enter our domain name "Streetrack.com"
-    - Provide the "thuynh" credentials to join the domain.<br><br>
+  **Step 3: Join Domain With Windows 10 VM:**<br><br>
+  ![Image 19](https://i.imgur.com/ZSyic1G.png)<br><br>
   
-  ![Image 5](images/image5.jpg)<br><br>
+  - On the client VM (Windows 10), log in using the Domain Admin "thuynh"
+  - Right click the "Start Menu" and choose "System"<br><br>
 
-  ![Image 5](images/image5.jpg)<br><br>
+  ![Image 20](https://i.imgur.com/bAi0515.png)<br><br>
+  
+  - Click on "Advanced system settings"<br><br>
 
-  ![Image 5](images/image5.jpg)<br><br>
+  ![Image 21](https://i.imgur.com/MMVbJTg.png)<br><br>
+    
+  - Go to the "Computer Name" tab and click "Change"<br><br>
+  
+  ![Image 22](https://i.imgur.com/yzG1KKq.png)<br><br>
+  
+  - Change "Computer name" to "Client-1"
+  - Choose "Domain" and enter our domain name "Streetrack.com"<br><br>
+  
+  ![Image 23](https://i.imgur.com/W8OxzO3.png)<br><br>
+  
+  - Provide the "thuynh" credentials to join the domain.<br><br>
+  
+  ![Image 24](https://i.imgur.com/EFKnAvz.png)<br><br>
 
-  ![Image 5](images/image5.jpg)<br><br>
-
-  ![Image 5](images/image5.jpg)<br><br>
-
-  ![Image 5](images/image5.jpg)<br><br>
+  - Let's go! We've joined the Domain!
   
   **Step 4: Test Connectivity:**
   - On the client VM, open a Command Prompt.
