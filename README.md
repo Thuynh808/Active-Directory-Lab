@@ -36,7 +36,7 @@ Collectively, these tools and architectural elements culminate in an environment
 <details>
   <summary><h2><b>Section 1: NETWORK INTERFACE CARD (NIC) CONFIGURATIONS</b></h2></summary>
   <br> <br>
-  In this section, I'll be configuring the 2 NICs on the Windows Server 2019.<br><br>
+  In this section, We'll be configuring the 2 NICs on the Windows Server 2019.<br><br>
   
   ![Image 1](https://i.imgur.com/wDilWI5.png)
   
@@ -98,14 +98,54 @@ Collectively, these tools and architectural elements culminate in an environment
   Awesome! We've successfully installed and configured Active Directory Domain Services on our Windows Server 2019.
 </details>
 
-
 <details>
-  <summary>Section 3: CREATE USERS AND GROUPS</summary>
+  <summary><h2><b>Section 3: MANAGING USERS AND ORGANIZATIONAL UNITS (OUs)</b></h2></summary>
+  <br><br>
   
-  Describe the architecture components you mentioned earlier in this section.
+  Here, we'll be exploring how to efficiently manage users by creating Organizational Units (OUs), adding users, and assigning administrative privileges.<br><br>
+  
+  ![Image 3](https://i.imgur.com/eGgqXno.png)
+  <br><br>
+  
+  **Step 1: Create Organizational Units (OUs):**
+  - Open "Active Directory Users and Computers."
+  - Right-click on the domain name and choose "New" > "Organizational Unit."
+  - Name the OU "_ADMINS" and "_USERS" respectively.
 
-  ![Image 3](https://i.imgur.com/2TLFD6o.png)
+  ![Image 3](https://i.imgur.com/nBDdKb0.png)
+  <br><br>
+  
+  **Step 2: Create User Account:**
+  - Right-click on the "_ADMINS" OU and choose "New" > "User."
+  - Enter user details:
+    - First Name: Thong
+    - Last Name: Huynh
+    - User Logon Name: thuynh
+      
+  ![Image 3](https://i.imgur.com/kozipGr.png)
+  <br><br>
+
+  **Step 3: Add User to Domain Admins Group:**
+  - Locate the user you just created and right-click.
+  - Select "Properties."
+  - In the "Member Of" tab, click "Add."
+  - Enter "Domain Admins" and click "Check Names."
+  - Click "OK" to add the user to the "Domain Admins" group.
+
+  ![Image 3](https://i.imgur.com/TA0MoBV.png)
+  <br><br>
+  ![Image 3](https://i.imgur.com/bgI8oMM.png)
+  <br><br>
+  
+  **Step 4: Verify User and OU Creation:**
+  - Refresh Active Directory by restarting and log in with new Admin User credentials to confirm User and OU Creation.
+
+  ![Image 3](https://i.imgur.com/DLMH7ra.png)
+  <br><br>
+  
+  Yay! we've successfully created Organizational Units (OUs), added a user to the "_ADMINS" OU, and granted administrative privileges by adding our user to the "Domain Admins" group.
 </details>
+
 
 <details>
   <summary>Section 4: INSTALL & CONFIGURE DHCP </summary>
