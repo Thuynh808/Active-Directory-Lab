@@ -190,7 +190,7 @@ Collectively, these tools and architectural elements culminate in an environment
   ![Image 10](images/image4.jpg)<br><br>
   
   **Step 5: Authorize DHCP Server:**
-  - If needed, right-click on your server name in "DHCP Manager" and choose "Authorize."<br><br>
+  - If needed, we'll right-click on the server name in "DHCP Manager" and choose "Authorize."<br><br>
   
   ![Image 10](images/image4.jpg)<br><br>
   
