@@ -201,16 +201,31 @@ Collectively, these tools and architectural elements culminate in an environment
   
   In this section, we'll focus on installing and configuring Network Address Translation (NAT), a technique that enables devices within our internal network to access the external internet while using a single public IP address.<br><br>
   
-  ![Image 5](images/image5.jpg)
-  
+  ![Image 5](images/image5.jpg)<br><br>
+
   **Step 1: Open Server Manager:**
   - Launch "Server Manager" on the Windows Server 2019
+  - Click "Manage" > "Add Roles and Features."
+  - Select "Role-based or feature-based installation" and click "Next."
+  - Choose the local server(DC) and proceed.
+  - Check "Remote Access" and complete the installation wizard.<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
   
   **Step 2: Configure NAT:**
   - After installation, open "Routing and Remote Access" from "Administrative Tools"
-  - Right-click on our server name and choose "Configure and Enable Routing and Remote Access"
+  - Right-click on our server name and choose "Configure and Enable Routing and Remote Access"<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
+  
   - Follow the wizard, selecting "Network address translation (NAT)"
-  - Select the external network interface(Internet) for public connection
+  - Select the external network interface(Internet) for public connection<br><br>
+  
+  ![Image 5](images/image5.jpg)<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
   
   **Step 3: Enable NAT and Join Domain:**
   - In the "NAT" section, right-click on the server name and choose "NAT" > "Enable."
@@ -219,15 +234,29 @@ Collectively, these tools and architectural elements culminate in an environment
     - Open "System Properties" on the client VM
     - Go to the "Computer Name" tab and click "Change"
     - Choose "Domain" and enter our domain name "Streetrack.com"
-    - Provide the "thuynh" credentials to join the domain.
+    - Provide the "thuynh" credentials to join the domain.<br><br>
+  
+  ![Image 5](images/image5.jpg)<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>
   
   **Step 4: Test Connectivity:**
   - On the client VM, open a Command Prompt.
   - Use the following commands to verify network settings and connectivity:
     - Run `ipconfig` to check the assigned IP configuration.
-    - Run `ping google.com` to test internet connectivity.
+    - Run `ping www.google.com` to test internet connectivity.<br><br>
   
-  YES! We've successfully configured Network Address Translation (NAT), joined the domain using "thuynh" credentials, and verified internet and internal network connectivity on the client VM.
+  ![Image 5](images/image5.jpg)<br><br>
+  
+  There we go! We've successfully configured Network Address Translation (NAT), joined the domain using "thuynh" credentials, and verified internet and internal network connectivity on the client VM.
 </details>
 
 
