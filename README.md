@@ -9,27 +9,30 @@
 
 Welcome to my dynamic Homelab project, where I'll be crafting a virtual environment to simulate a mini corporate setup. Through VirtualBox, I've orchestrated two key players: a Windows Server 2019 Domain Controller and a Windows 10 Client. The Domain Controller stands as the authority figure, managing the digital domain, while the Windows 10 Client plays the role of an employee navigating within this intricate network. As I dive into configuring network interfaces, my aim is to create a functional small-scale representation that reflects the complexities of a real-world corporate IT environment. Join me as I navigate the details of this Homelab journey, aiming to create a rich learning experience in network management and system administration.
 
-The architecture of the Active Directory Homelab has the following componets:
 
-- **VirtualBox:** Serving as the foundation, VirtualBox enables the creation and management of virtual machines, offering a platform to experiment and simulate real-world scenarios.
+The Active Directory Homelab architecture includes:
 
-- **Windows Server 2019:** This heavyweight player acts as the Domain Controller, holding the reins of the digital realm. It manages users, devices, and policies while acting as the core of Active Directory Domain Services.
 
-- **Windows 10:** Emulating the role of an employee workstation, Windows 10 offers insights into the end-user experience within the corporate setting.
+- **VirtualBox:** The foundation for creating and managing virtual machines, facilitating real-world scenario simulation.
 
-- **Network Interfaces:** These digital connectors facilitate communication, with one dedicated to external internet access and another fostering internal network interaction.
+- **Windows Server 2019:** As the Domain Controller, it manages users, devices, and policies, forming the core of Active Directory Domain Services.
 
-- **Active Directory Domain Services:** A pivotal tool for user management and network organization, it helps structure users, computers, and resources in a coherent manner.
+- **Windows 10:** Representing an employee workstation, it provides insights into the corporate end-user experience.
 
-- **DHCP:** The Dynamic Host Configuration Protocol ensures that devices within the network receive IP addresses automatically, streamlining network configuration.
+- **Network Interfaces:** Enabling communication, with one for internet access and another for internal network interaction.
 
-- **RAS/NAT:** Remote Access Server and Network Address Translation come together to enable seamless connectivity between the internal network and external internet, while also offering a bridge for VPN connections.
+- **Active Directory Domain Services:** Crucial for user and network organization, structuring users, computers, and resources coherently.
 
-- **User List Text File:** This simple yet effective file serves as a repository for user information, facilitating efficient user setup and management.
+- **DHCP:** Automates IP address assignment, streamlining network configuration.
 
-- **Python Script:** After careful research and lessons, I created a Python script that adds a layer of automation and customization, making user creation smoother and more dynamic.
+- **RAS/NAT:** Facilitates seamless internal-external network connectivity, including VPN access.
 
-- **Group Policy Object:** A powerful tool for enforcing policies across the network, Group Policy Objects help maintain consistent settings, security, and access controls.
+- **User List Text File:** Stores user info, aiding efficient user setup and management.
+
+- **Python Script:** Adds automation and customization, enhancing user creation.
+
+- **Group Policy Object:** Enforces network-wide policies, maintaining settings, security, and access controls.
+
 
 Collectively, these tools and architectural elements culminate in an environment where virtual machines interact harmoniously, mirroring the intricacies of a corporate ecosystem. Through exploration and manipulation, this lab offers an immersive platform to experiment, learn, and finesse the art of network management and system administration.
 
@@ -39,6 +42,7 @@ Collectively, these tools and architectural elements culminate in an environment
   In this section, We'll be configuring the 2 NICs on the Windows Server 2019.<br><br>
   
   ![Image 1](https://i.imgur.com/wDilWI5.png)
+  <br><br>
   
   **Step 1: Access Network Settings:**
   - Open "Network Connections" from the Control Panel
@@ -90,8 +94,8 @@ Collectively, these tools and architectural elements culminate in an environment
     - Domain Name: Streetrack.com
   - Set a Directory Services Restore Mode (DSRM) password.
   - DNS can be left alone for automatic configuration.
-  - Complete the wizard and let the server restart.
-<br><br>
+  - Complete the wizard and let the server restart.<br><br>
+  
   ![Image 3](https://i.imgur.com/2TLFD6o.png)
 <br><br>
   
@@ -105,43 +109,42 @@ Collectively, these tools and architectural elements culminate in an environment
   Here, we'll be exploring how to efficiently manage users by creating Organizational Units (OUs), adding users, and assigning administrative privileges.<br><br>
   
   ![Image 3](https://i.imgur.com/eGgqXno.png)
-  <br><br>
+<br><br>
   
   **Step 1: Create Organizational Units (OUs):**
   - Open "Active Directory Users and Computers."
   - Right-click on the domain name and choose "New" > "Organizational Unit."
-  - Name the OU "_ADMINS" and "_USERS" respectively.
+  - Name the OU "_ADMINS" and "_USERS" respectively.<br><br>
 
   ![Image 3](https://i.imgur.com/nBDdKb0.png)
-  <br><br>
+<br><br>
   
   **Step 2: Create User Account:**
   - Right-click on the "_ADMINS" OU and choose "New" > "User."
   - Enter user details:
     - First Name: Thong
     - Last Name: Huynh
-    - User Logon Name: thuynh
+    - User Logon Name: thuynh<br><br>
       
   ![Image 3](https://i.imgur.com/kozipGr.png)
-  <br><br>
+<br><br>
 
   **Step 3: Add User to Domain Admins Group:**
   - Locate the user you just created and right-click.
   - Select "Properties."
   - In the "Member Of" tab, click "Add."
   - Enter "Domain Admins" and click "Check Names."
-  - Click "OK" to add the user to the "Domain Admins" group.
-
-  ![Image 3](https://i.imgur.com/TA0MoBV.png)
-  <br><br>
-  ![Image 3](https://i.imgur.com/bgI8oMM.png)
-  <br><br>
+  - Click "OK" to add the user to the "Domain Admins" group.<br><br>
+  
+  ![Image 3](https://i.imgur.com/TA0MoBV.png)<br><br>
+  
+  ![Image 3](https://i.imgur.com/bgI8oMM.png)<br><br>
   
   **Step 4: Verify User and OU Creation:**
-  - Refresh Active Directory by restarting and log in with new Admin User credentials to confirm User and OU Creation.
-
+  - Refresh Active Directory by restarting and log in with new Admin User credentials to confirm User and OU Creation.<br><br>
+  
   ![Image 3](https://i.imgur.com/DLMH7ra.png)
-  <br><br>
+<br><br>
   
   Yay! we've successfully created Organizational Units (OUs), added a user to the "_ADMINS" OU, and granted administrative privileges by adding our user to the "Domain Admins" group.
 </details>
