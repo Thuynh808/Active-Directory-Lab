@@ -204,48 +204,56 @@ Collectively, these tools and architectural elements culminate in an environment
   ![Image 14](https://i.imgur.com/t5Vyt6T.png)<br><br>
 
   **Step 1: Open Server Manager:**
-  - Launch "Server Manager" on the Windows Server 2019
+  - Launch "Server Manager" on the Windows Server 2019.
   - Click "Manage" > "Add Roles and Features."
   - Select "Role-based or feature-based installation" and click "Next."
-  - Choose the local server(DC) and proceed.
+  - Choose the local server (DC) and proceed.
   - Check "Remote Access" and continue.
-  - Check "Routing" and finsih the installation wiazard<br><br>
+  - Check "Routing" and finish the installation wizard.<br><br>
 
   ![Image 15](https://i.imgur.com/M5CBamo.png)<br><br>
 
   ![Image 16](https://i.imgur.com/9i7EKSO.png)<br><br>
   
   **Step 2: Configure NAT:**
-  - After installation, open "Routing and Remote Access" from "Administrative Tools"
-  - Right-click on our server name and choose "Configure and Enable Routing and Remote Access"<br><br>
+  - After installation, open "Routing and Remote Access" from "Administrative Tools."
+  - Right-click on our server name and choose "Configure and Enable Routing and Remote Access."<br><br>
 
   ![Image 17](https://i.imgur.com/zoDo8Aj.png)<br><br>
   
-  - Follow the wizard, selecting "Network address translation (NAT)"
-  - Select the external network interface(Internet) for public connection<br><br>
+  - Follow the wizard, selecting "Network address translation (NAT)."
+  - Select the external network interface (Internet) for public connection.<br><br>
   
   ![Image 18](https://i.imgur.com/nMT8je3.png)<br><br>
 
   - In the "NAT" section, right-click on the server name and choose "NAT" > "Enable."<br><br>
+</details>
+
+<details>
+  <summary><h2><b>Section 6: JOIN DOMAIN </b></h2></summary>
+  <br><br>
   
   **Step 3: Join Domain With Windows 10 VM:**<br><br>
+
+  Here, we will run the Windows 10 VM, join the domain (Streetrack.com),  and test connectivity. <br><br>
+  
   ![Image 19](https://i.imgur.com/ZSyic1G.png)<br><br>
   
-  - On the client VM (Windows 10), log in using the Domain Admin "thuynh"
-  - Right click the "Start Menu" and choose "System"<br><br>
+  - On the client VM (Windows 10), log in using the Domain Admin "thuynh."
+  - Right-click the "Start Menu" and choose "System."<br><br>
 
   ![Image 20](https://i.imgur.com/bAi0515.png)<br><br>
   
-  - Click on "Advanced system settings"<br><br>
+  - Click on "Advanced system settings."<br><br>
 
   ![Image 21](https://i.imgur.com/MMVbJTg.png)<br><br>
     
-  - Go to the "Computer Name" tab and click "Change"<br><br>
+  - Go to the "Computer Name" tab and click "Change."<br><br>
   
   ![Image 22](https://i.imgur.com/yzG1KKq.png)<br><br>
   
-  - Change "Computer name" to "Client-1"
-  - Choose "Domain" and enter our domain name "Streetrack.com"<br><br>
+  - Change "Computer name" to "Client-1."
+  - Choose "Domain" and enter our domain name "Streetrack.com."<br><br>
   
   ![Image 23](https://i.imgur.com/W8OxzO3.png)<br><br>
   
@@ -253,10 +261,20 @@ Collectively, these tools and architectural elements culminate in an environment
   
   ![Image 24](https://i.imgur.com/EFKnAvz.png)<br><br>
 
-  - Let's go! We've joined the Domain!
+  - Let's go! We've joined the Domain!<br><br>
+</details>
+
+<details>
+  <summary><h2><b>Section 7: TEST CONNECTIVITY </b></h2></summary>
+  <br><br>
+
+  Now, we will test and confirm the confgurations that we set, ensuring the proper DHCP assignments and being able to connect to the internet.
   
-  **Step 4: Test Connectivity:**
-  - On the client VM, open a Command Prompt.
+  **Step 4: Test Connectivity:**<br><br>
+
+  ![Image 5](images/image5.jpg)<br><br>  
+
+  - On the Windows 10 VM, open a Command Prompt.
   - Use the following commands to verify network settings and connectivity:
     - Run `ipconfig` to check the assigned IP configuration.
     - Run `ping www.google.com` to test internet connectivity.<br><br>
@@ -265,7 +283,6 @@ Collectively, these tools and architectural elements culminate in an environment
   
   There we go! We've successfully configured Network Address Translation (NAT), joined the domain using "thuynh" credentials, and verified internet and internal network connectivity on the client VM.
 </details>
-
 
 <details>
   <summary>Section 6: CREATE AND RUN PYTHON SCRIPT</summary>
