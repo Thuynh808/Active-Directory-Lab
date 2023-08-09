@@ -283,11 +283,94 @@ Collectively, these tools and architectural elements culminate in an environment
 </details>
 
 <details>
-  <summary>Section 6: CREATE AND RUN PYTHON SCRIPT</summary>
+  <summary><h2><b>Section 8: CREATING USERS WITH PYTHON SCRIPT</b></h2></summary>
+  <br><br>
   
-  Describe the architecture components you mentioned earlier in this section.
+  In this section, we will be going through the process of creating and running a Python script that takes a text file with a list of usernames to make user creation smoother and more dynamic. This will add a layer of automation and customization to our homelab environment.<br><br>
 
-  ![Image 2](images/image2.jpg)
+  I've created the following files that we'll be using for this section:
+
+  My_users_list.txt 
+   - A list of over 100 names(first and last)<br><br>
+
+  <details>
+  <summary>Create_AD_Users.py (Click here to view)</summary>
+  
+  ```python
+   from pyad import *
+
+  pyad.set_defaults(ldap_server="10.2.22.1", username="thuynh@streetrack.com", password="Cyberlab123!")
+  ou = pyad.adcontainer.ADContainer.from_dn("OU=_USERS,DC=Streetrack,DC=com")
+
+  with open('my_users_list.txt', 'r') as file:
+      lines = file.readlines()
+
+  for line in lines:
+      first_name, last_name = line.strip().split()
+      username = first_name[0].upper() + last_name.lower()
+      
+      try:
+          user = pyad.aduser.ADUser.create(username, ou)
+          
+          user.update_attribute('displayName', f"{first_name} {last_name}")
+          user.update_attribute('sAMAccountName', username)
+          user.update_attribute('givenName', first_name)
+          user.update_attribute('sn', last_name)
+          
+          password = "Cyberlab123!"
+          user.set_password(password)
+          
+          print(f"Users {username} created successfully.")
+          
+      except Exception as e:
+          print(f"Error creating users {username}: {str(e)}")
+  ```
+  </details>
+  
+   - A Python script to create Users from the My_users_list.txt file
+   - Users will be placed in the "_USERS" OU in "Streetrack.com" Domain
+   - Default password will be set to "Cyberlab123!"<br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  
+  **Step 1: Download and Install Python:**
+  - Download Python from website, right-click install file and choose "Run as Administrator"<br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  
+  **Step 2: Install Required Dependencies:**
+  - Open a Command Prompt as administrators.<br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  
+  - Run the following commands to install the necessary components one by one:
+    ```
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    python get-pip.py
+    pip install pyad pywin32
+    ```
+    <br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  
+  **Step 3: Navigate to Script Directory:**
+  - Navigate to the directory where the Python script and user list text file resides.<br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  
+  **Step 4: Run the Python Script:**
+  - In the Command Prompt, run the script using the command:
+    ```
+    python create_ad_users.py
+    ```
+  
+  **Step 5: Verify User Creations:**
+  - In Active Directory Users and Computers, navigate to the appropriate Organizational Unit (OU) to verify that the users created by the scripts are listed.
+  
+  **Step 6: Test User Accounts:**
+  - Log into one of the created user accounts to confirm its functionality and attributes.<br><br>
+  
+  Congratulations! You've successfully created and run Python scripts to automate user creations in Active Directory, streamlining the process and enhancing efficiency.
 </details>
 
 <details>
