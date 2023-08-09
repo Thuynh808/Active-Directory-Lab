@@ -272,14 +272,12 @@ Collectively, these tools and architectural elements culminate in an environment
   
   **Step 4: Test Connectivity:**<br><br>
 
-  ![Image 5](images/image5.jpg)<br><br>  
-
   - On the Windows 10 VM, open a Command Prompt.
   - Use the following commands to verify network settings and connectivity:
     - Run `ipconfig` to check the assigned IP configuration.
     - Run `ping www.google.com` to test internet connectivity.<br><br>
   
-  ![Image 5](images/image5.jpg)<br><br>
+  ![Image 25](https://i.imgur.com/ofXY8Sf.png)<br><br>
   
   There we go! We've successfully configured Network Address Translation (NAT), joined the domain using "thuynh" credentials, and verified internet and internal network connectivity on the client VM.
 </details>
