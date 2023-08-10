@@ -338,6 +338,7 @@ for line in lines:
     except Exception as e:
         # This will print an error message if an exception occurs and will help with error handling. 
         print(f"Error creating user {username}: {str(e)}")
+```
 
   </details>
   
@@ -357,7 +358,7 @@ for line in lines:
   
   ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
-  - Run the following commands to install the necessary components one by one:
+  - Run the each of the following commands to install the necessary libraries and components:
     ```
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python get-pip.py
@@ -379,12 +380,12 @@ for line in lines:
     ```
   
   **Step 5: Verify User Creations:**
-  - In Active Directory Users and Computers, navigate to the appropriate Organizational Unit (OU) to verify that the users created by the scripts are listed.
+  - In Active Directory Users and Computers, navigate to the "_USERS" OU to verify that the users created by the scripts are listed.
   
   **Step 6: Test User Accounts:**
   - Log into one of the created user accounts to confirm its functionality and attributes.<br><br>
   
-  Congratulations! You've successfully created and run Python scripts to automate user creations in Active Directory, streamlining the process and enhancing efficiency.
+  Let's go!! We now have created and ran the Python script to automate user creations in Active Directory, streamlining the process and enhancing efficiency!
 </details>
 
 <details>
