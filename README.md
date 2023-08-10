@@ -405,8 +405,6 @@ for line in lines:
   <br><br>
   
   In this section, we're diving into Group Policy configurations, a powerful tool that allows us to manage various settings, security policies, and access controls across our Active Directory environment.<br><br>
-  
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
 
   **Step 1: Access Group Policy Management:**
   - Open "Server Manager" on the Windows Server 2019.
@@ -420,47 +418,73 @@ for line in lines:
   
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
   **Step 3: Edit GPO Settings:**
   - Right-click on the newly created GPO and select "Edit."<br><br>
   
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
   - After selecting "Edit," navigate to the following path within the editor:
+    
     - Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy
       - Password Policy:
         - Set password complexity requirements.
         - Enable "Password must meet complexity requirements."
         - Set minimum password length to 14 characters.<br><br>
-  
+        
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
-    - Account Lockout Policy:
-      - Set account lockout threshold to 3 attempts.
-      - Other Account Lockout Policies will be changed to suggested values. 
+    - Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy
+      - Account Lockout Policy:
+        - Set account lockout threshold to 3 attempts.
+        - Other Account Lockout Policies will be changed to suggested values. <br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+
+    - Computer Configuration > Administrative Templates > System 
+      - Turn off forced restart. (Good Practice: Avoids unwanted restarts.<br><br>
 
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
-
-   - User Configuration:
+      
+      - Administrative Templates > All Settings:
+        - Prohibit user installs. (Good Practice: Limits unauthorized software.)<br><br>
+        
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
+    - User Configuration:
       - Administrative Templates > Control Panel:
         - Prohibit access to the Control Panel. (Good Practice: Prevents unauthorized system changes.)<br><br>
         
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
-
+  
       - Administrative Templates > System:
         - Prevent access to the command prompt. (Good Practice: Reduces misuse risks.)
-        - Turn off forced restart. (Good Practice: Avoids unwanted restarts.)
+        
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
       - Administrative Templates > System > Removable Storage Access:
-        - All Removable Storage classes: Deny all access. (Good Practice: Prevents data leakage.)
+        - All Removable Storage classes: Deny all access. (Good Practice: Prevents data leakage.)<br><br>
+        
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
       - Administrative Templates > System > Group Policy:
-        - Disable software installation. (Good Practice: Maintains controlled software environment.)
-      - Administrative Templates > System > Group Policy > Application Management:
-        - Prohibit user installs. (Good Practice: Limits unauthorized software.)
+        - Disable software installation. (Good Practice: Maintains controlled software environment.)<br><br>
+        
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
       - Administrative Templates > System > Group Policy > Microsoft Store:
-        - Turn off the Store application. (Good Practice: Controls software sources.)
+        - Turn off the Store application. (Good Practice: Controls software sources.)<br><br>
+        
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
       - Administrative Templates > System > Group Policy > OneDrive:
-        - Prevent the usage of OneDrive for file storage. (Good Practice: Enhances data control.)
+        - Prevent the usage of OneDrive for file storage. (Good Practice: Enhances data control.)<br><br>
+        
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
       - Administrative Templates > Windows Components > Windows Defender Antivirus:
         - Turn off Windows Defender Antivirus. (Good Practice: Supports independent antivirus solutions.)<br><br>
   
