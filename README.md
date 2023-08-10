@@ -401,20 +401,83 @@ for line in lines:
 </details>
 
 <details>
-  <summary>Section 7: GROUP POLICY CONFIGURATIONS</summary>
+  <summary><h2><b>Section 9: GROUP POLICY CONFIGURATIONS</b></h2></summary>
+  <br><br>
   
-  Describe the architecture components you mentioned earlier in this section.
+  In this section, we're diving into Group Policy configurations, a powerful tool that allows us to manage various settings, security policies, and access controls across our Active Directory environment.<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
 
-  ![Image 2](images/image2.jpg)
+  **Step 1: Access Group Policy Management:**
+  - Open "Server Manager" on the Windows Server 2019.
+  - Click "Tools" > "Group Policy Management."<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
+  **Step 2: Create a New Group Policy Object (GPO):**
+  - Right-click on the "Group Policy Objects" container and select "New."
+  - We're going to name the GPO "Homelab Users GPO"<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
+  **Step 3: Edit GPO Settings:**
+  - Right-click on the newly created GPO and select "Edit."<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
+  - Navigate through the GPO editor to configure the following settings:
+    - Password Policy:
+      - Set password complexity requirements.
+      - Enable "Password must meet complexity requirements."
+    - Account Lockout Policy:
+      - Set account lockout threshold to 3 attempts.
+    - Account Policies:
+      - Set minimum password length to 20 characters.<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+
+   - User Configuration:
+      - Administrative Templates > Control Panel:
+        - Prohibit access to the Control Panel. (Good Practice: Prevents unauthorized system changes.)
+      - Administrative Templates > System:
+        - Prevent access to the command prompt. (Good Practice: Reduces misuse risks.)
+        - Turn off forced restart. (Good Practice: Avoids unwanted restarts.)
+      - Administrative Templates > System > Removable Storage Access:
+        - All Removable Storage classes: Deny all access. (Good Practice: Prevents data leakage.)
+      - Administrative Templates > System > Group Policy:
+        - Disable software installation. (Good Practice: Maintains controlled software environment.)
+      - Administrative Templates > System > Group Policy > Application Management:
+        - Prohibit user installs. (Good Practice: Limits unauthorized software.)
+      - Administrative Templates > System > Group Policy > Microsoft Store:
+        - Turn off the Store application. (Good Practice: Controls software sources.)
+      - Administrative Templates > System > Group Policy > OneDrive:
+        - Prevent the usage of OneDrive for file storage. (Good Practice: Enhances data control.)
+      - Administrative Templates > Windows Components > Windows Defender Antivirus:
+        - Turn off Windows Defender Antivirus. (Good Practice: Supports independent antivirus solutions.)<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+        
+  **Step 4: Apply GPO to "_USERS" OU:**
+  - Link the GPO to the "_USERS" Organizational Unit.
+  - Right-click on the "_USERS" OU and select "Link an Existing GPO."
+  - Choose the GPO you created and link it to the "_USERS" OU.<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
+  **Step 5: Force Group Policy Update:**
+  - On the client machine, open a Command Prompt as an administrator.
+  - Run the command: `gpupdate /force`<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
+  **Step 6: Test GPO Effects:**
+  - Verify that the applied GPO settings are in effect on the client machine.<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
+  Group Policy configurations offer a structured way to manage and enforce consistent settings, security policies, and access controls. By effectively using GPOs, we can enhance the security and organization of the network, creating a more efficient system.
 </details>
 
-<details>
-  <summary>Section 8: CONFIRM FUNCTIONALITY </summary>
-  
-  Describe the process of setting up the Windows Server's internal NIC here.
-
-  ![Image 3](images/image3.jpg)
-</details>
 
 
 
