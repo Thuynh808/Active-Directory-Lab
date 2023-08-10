@@ -370,6 +370,10 @@ for line in lines:
   
   ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  
   **Step 3: Navigate to Script Directory:**
   - Navigate to the directory where the Python script and user list text file resides<br><br>
   
