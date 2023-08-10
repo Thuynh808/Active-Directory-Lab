@@ -293,10 +293,10 @@ Collectively, these tools and architectural elements culminate in an environment
   My_users_list.txt 
    - A list of over 100 names(first and last)<br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 26](https://i.imgur.com/LuDIMca.png)<br><br>
 
   <details>
-  <summary>Create_AD_Users.py (Click here to view)</summary>
+  <summary>Create_AD_Users.py <b>(CLICK HERE TO VIEW)</b></summary>
   
   ```python
 # This will import everything from the pyad module
@@ -341,43 +341,42 @@ for line in lines:
         # This will print an error message if an exception occurs and will help with error handling. 
         print(f"Error creating user {username}: {str(e)}")
 ```
-
   </details>
   
    - A Python script to create Users from the My_users_list.txt file
    - Users will be placed in the "_USERS" OU in "Streetrack.com" Domain
    - Default password will be set to "Cyberlab123!"<br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 27](https://i.imgur.com/NSCjdXp.png)<br><br>
   
   **Step 1: Download and Install Python:**
   - Download Python from website, right-click install file and choose "Run as Administrator"<br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 28](https://i.imgur.com/LfjqV1i.png)<br><br>
   
   **Step 2: Install Required Dependencies:**
   - Open a Command Prompt as administrators<br><br>
-  
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
   - Run the each of the following commands to install the necessary libraries and components:
     ```
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
     python get-pip.py
-    pip install pyad pywin32
+    pip install pyad
+    pip install pywin32
     ```
-    <br><br>
+
+  ![Image 33](https://i.imgur.com/L0A0n1e.png)<br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 34](https://i.imgur.com/1GwzbDo.png)<br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
-  
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 35](https://i.imgur.com/9EreQX8.png)<br><br>
   
   **Step 3: Navigate to Script Directory:**
   - Navigate to the directory where the Python script and user list text file resides<br><br>
+
+  ![Image 36](https://i.imgur.com/W0aHdyI.png)<br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 37](https://i.imgur.com/AKnhjst.png)<br><br>
   
   **Step 4: Run the Python Script:**
   - In the Command Prompt, run the script using the command:
@@ -386,17 +385,17 @@ for line in lines:
     ```
   <br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 38](https://i.imgur.com/H8cpUUg.png)<br><br>
   
   **Step 5: Verify User Creations:**
   - In Active Directory Users and Computers, navigate to the "_USERS" OU to verify that the users created by the scripts are listed<br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 39](https://i.imgur.com/CP0Lcax.png)<br><br>
   
   **Step 6: Test User Accounts:**
   - Log into one of the created user accounts to confirm its functionality and attributes<br><br>
   
-  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
+  ![Image 40](https://i.imgur.com/Aaz86PX.png)<br><br>
   
   Let's go!! We now have created and ran the Python script to automate user creations in Active Directory, streamlining the process and enhancing efficiency!
 </details>
