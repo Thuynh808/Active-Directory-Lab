@@ -112,15 +112,15 @@ Collectively, these tools and architectural elements culminate in an environment
 <br><br>
   
   **Step 1: Create Organizational Units (OUs):**
-  - Open "Active Directory Users and Computers."
-  - Right-click on the domain name and choose "New" > "Organizational Unit."
-  - Name the OU "_ADMINS" and "_USERS" respectively.<br><br>
+  - Open "Active Directory Users and Computers"
+  - Right-click on the domain name and choose "New" > "Organizational Unit"
+  - Create 2 OUs and name them: "_ADMINS" and "_USERS" respectively<br><br>
 
   ![Image 5](https://i.imgur.com/nBDdKb0.png)
 <br><br>
   
   **Step 2: Create User Account:**
-  - Right-click on the "_ADMINS" OU and choose "New" > "User."
+  - Right-click on the "_ADMINS" OU and choose "New" > "User"
   - Enter user details:
     - First Name: Thong
     - Last Name: Huynh
@@ -130,18 +130,18 @@ Collectively, these tools and architectural elements culminate in an environment
 <br><br>
 
   **Step 3: Add User to Domain Admins Group:**
-  - Locate the user we just created and right-click.
-  - Select "Properties."
-  - In the "Member Of" tab, click "Add."
-  - Enter "Domain Admins" and click "Check Names."
-  - Click "OK" to add the user to the "Domain Admins" group.<br><br>
+  - Locate the user we just created and right-click
+  - Select "Properties"
+  - In the "Member Of" tab, click "Add"
+  - Enter "Domain Admins" and click "Check Names"
+  - Click "OK" to add the user to the "Domain Admins" group<br><br>
   
   ![Image 7](https://i.imgur.com/TA0MoBV.png)<br><br>
   
   ![Image 8](https://i.imgur.com/bgI8oMM.png)<br><br>
   
   **Step 4: Verify User and OU Creation:**
-  - Refresh Active Directory by restarting and log in with new Admin User credentials to confirm User and OU Creation.<br><br>
+  - Refresh Active Directory by restarting and log in with new Admin User credentials to confirm User and OU Creation<br><br>
   
   ![Image 9](https://i.imgur.com/DLMH7ra.png)
 <br><br>
@@ -161,22 +161,22 @@ Collectively, these tools and architectural elements culminate in an environment
   ![Image 10](https://i.imgur.com/0yCKtnX.png)<br><br>
   
   **Step 2: Add DHCP Role:**
-  - Click "Manage" > "Add Roles and Features."
-  - Select "Role-based or feature-based installation" and click "Next."
-  - Choose the local server(DC) and proceed.
-  - Check "DHCP Server" and complete the installation wizard.<br><br>
+  - Click "Manage" > "Add Roles and Features"
+  - Select "Role-based or feature-based installation" and click "Next"
+  - Choose the local server(DC) and proceed
+  - Check "DHCP Server" and complete the installation wizard<br><br>
   
   ![Image 11](https://i.imgur.com/HUQbLnu.png)<br><br>
 
   **Step 3: Configure DHCP:**
-  - After installation, open "DHCP Manager" from "Administrative Tools."
-  - Right-click on our server name and choose "Configure DHCP."
-  - Follow the wizard, selecting the appropriate network connection.<br><br>
+  - After installation, open "DHCP Manager" from "Administrative Tools"
+  - Right-click on our server name and choose "Configure DHCP"
+  - Follow the wizard, selecting the appropriate network connection<br><br>
   
   ![Image 12](https://i.imgur.com/A4WWdGF.png)<br><br>
   
   **Step 4: Create DHCP Scope:**
-  - In "DHCP Manager," right-click on "IPv4" and choose "New Scope."
+  - In "DHCP Manager," right-click on "IPv4" and choose "New Scope"
   - Set the scope name, IP range, subnet mask, default gateway, DNS servers, and lease duration:
     - Scope Name: 10.2.22.100-200
     - Start IP Address: 10.2.22.100
@@ -204,29 +204,29 @@ Collectively, these tools and architectural elements culminate in an environment
   ![Image 14](https://i.imgur.com/t5Vyt6T.png)<br><br>
 
   **Step 1: Open Server Manager:**
-  - Launch "Server Manager" on the Windows Server 2019.
-  - Click "Manage" > "Add Roles and Features."
-  - Select "Role-based or feature-based installation" and click "Next."
-  - Choose the local server (DC) and proceed.
-  - Check "Remote Access" and continue.
-  - Check "Routing" and finish the installation wizard.<br><br>
+  - Launch "Server Manager" on the Windows Server 2019
+  - Click "Manage" > "Add Roles and Features"
+  - Select "Role-based or feature-based installation" and click "Next"
+  - Choose the local server (DC) and proceed
+  - Check "Remote Access" and continue
+  - Check "Routing" and finish the installation wizard<br><br>
 
   ![Image 15](https://i.imgur.com/M5CBamo.png)<br><br>
 
   ![Image 16](https://i.imgur.com/9i7EKSO.png)<br><br>
   
   **Step 2: Configure NAT:**
-  - After installation, open "Routing and Remote Access" from "Administrative Tools."
-  - Right-click on our server name and choose "Configure and Enable Routing and Remote Access."<br><br>
+  - After installation, open "Routing and Remote Access" from "Administrative Tools"
+  - Right-click on our server name and choose "Configure and Enable Routing and Remote Access"<br><br>
 
   ![Image 17](https://i.imgur.com/zoDo8Aj.png)<br><br>
   
-  - Follow the wizard, selecting "Network address translation (NAT)."
-  - Select the external network interface (Internet) for public connection.<br><br>
+  - Follow the wizard, selecting "Network address translation (NAT)"
+  - Select the external network interface (Internet) for public connection<br><br>
   
   ![Image 18](https://i.imgur.com/nMT8je3.png)<br><br>
 
-  - In the "NAT" section, right-click on the server name and choose "NAT" > "Enable."<br><br>
+  - In the "NAT" section, right-click on the server name and choose "NAT" > "Enable"<br><br>
 </details>
 
 <details>
@@ -235,29 +235,29 @@ Collectively, these tools and architectural elements culminate in an environment
   
   **Step 3: Join Domain With Windows 10 VM:**<br><br>
 
-  Here, we will run the Windows 10 VM, join the domain (Streetrack.com),  and test connectivity. <br><br>
+  Here, we will run the Windows 10 VM, join the domain (Streetrack.com),  and test connectivity <br><br>
   
   ![Image 19](https://i.imgur.com/ZSyic1G.png)<br><br>
   
-  - On the client VM (Windows 10), log in using the Domain Admin "thuynh."
-  - Right-click the "Start Menu" and choose "System."<br><br>
+  - On the client VM (Windows 10), log in using the Domain Admin "thuynh"
+  - Right-click the "Start Menu" and choose "System"<br><br>
 
   ![Image 20](https://i.imgur.com/bAi0515.png)<br><br>
   
-  - Click on "Advanced system settings."<br><br>
+  - Click on "Advanced system settings"<br><br>
 
   ![Image 21](https://i.imgur.com/MMVbJTg.png)<br><br>
     
-  - Go to the "Computer Name" tab and click "Change."<br><br>
+  - Go to the "Computer Name" tab and click "Change"<br><br>
   
   ![Image 22](https://i.imgur.com/yzG1KKq.png)<br><br>
   
-  - Change "Computer name" to "Client-1."
-  - Choose "Domain" and enter our domain name "Streetrack.com."<br><br>
+  - Change "Computer name" to "Client-1"
+  - Choose "Domain" and enter our domain name "Streetrack.com"<br><br>
   
   ![Image 23](https://i.imgur.com/W8OxzO3.png)<br><br>
   
-  - Provide the "thuynh" credentials to join the domain.<br><br>
+  - Provide the "thuynh" credentials to join the domain<br><br>
   
   ![Image 24](https://i.imgur.com/EFKnAvz.png)<br><br>
 
@@ -272,10 +272,10 @@ Collectively, these tools and architectural elements culminate in an environment
   
   **Step 4: Test Connectivity:**<br><br>
 
-  - On the Windows 10 VM, open a Command Prompt.
+  - On the Windows 10 VM, open a Command Prompt
   - Use the following commands to verify network settings and connectivity:
-    - Run `ipconfig` to check the assigned IP configuration.
-    - Run `ping www.google.com` to test internet connectivity.<br><br>
+    - Run `ipconfig` to check the assigned IP configuration
+    - Run `ping www.google.com` to test internet connectivity<br><br>
   
   ![Image 25](https://i.imgur.com/ofXY8Sf.png)<br><br>
   
@@ -292,6 +292,8 @@ Collectively, these tools and architectural elements culminate in an environment
 
   My_users_list.txt 
    - A list of over 100 names(first and last)<br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
 
   <details>
   <summary>Create_AD_Users.py (Click here to view)</summary>
@@ -354,7 +356,7 @@ for line in lines:
   ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
   **Step 2: Install Required Dependencies:**
-  - Open a Command Prompt as administrators.<br><br>
+  - Open a Command Prompt as administrators<br><br>
   
   ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
@@ -369,7 +371,7 @@ for line in lines:
   ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
   **Step 3: Navigate to Script Directory:**
-  - Navigate to the directory where the Python script and user list text file resides.<br><br>
+  - Navigate to the directory where the Python script and user list text file resides<br><br>
   
   ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
@@ -378,12 +380,19 @@ for line in lines:
     ```
     python create_ad_users.py
     ```
+  <br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
   **Step 5: Verify User Creations:**
-  - In Active Directory Users and Computers, navigate to the "_USERS" OU to verify that the users created by the scripts are listed.
+  - In Active Directory Users and Computers, navigate to the "_USERS" OU to verify that the users created by the scripts are listed<br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
   **Step 6: Test User Accounts:**
-  - Log into one of the created user accounts to confirm its functionality and attributes.<br><br>
+  - Log into one of the created user accounts to confirm its functionality and attributes<br><br>
+  
+  ![Image 25](https://i.imgur.com/6hr2w27.png)<br><br>
   
   Let's go!! We now have created and ran the Python script to automate user creations in Active Directory, streamlining the process and enhancing efficiency!
 </details>
