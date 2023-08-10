@@ -425,20 +425,29 @@ for line in lines:
   
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
-  - Navigate through the GPO editor to configure the following settings:
-    - Password Policy:
-      - Set password complexity requirements.
-      - Enable "Password must meet complexity requirements."
+  - After selecting "Edit," navigate to the following path within the editor:
+    - Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Password Policy
+      - Password Policy:
+        - Set password complexity requirements.
+        - Enable "Password must meet complexity requirements."
+        - Set minimum password length to 14 characters.<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  
     - Account Lockout Policy:
       - Set account lockout threshold to 3 attempts.
-    - Account Policies:
-      - Set minimum password length to 20 characters.<br><br>
-  
+      - Other Account Lockout Policies will be changed to suggested values. 
+
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
 
    - User Configuration:
       - Administrative Templates > Control Panel:
-        - Prohibit access to the Control Panel. (Good Practice: Prevents unauthorized system changes.)
+        - Prohibit access to the Control Panel. (Good Practice: Prevents unauthorized system changes.)<br><br>
+        
+  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+
       - Administrative Templates > System:
         - Prevent access to the command prompt. (Good Practice: Reduces misuse risks.)
         - Turn off forced restart. (Good Practice: Avoids unwanted restarts.)
