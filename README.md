@@ -478,6 +478,42 @@ for line in lines:
   Group Policy configurations offer a structured way to manage and enforce consistent settings, security policies, and access controls. By effectively using GPOs, we can enhance the security and organization of the network, creating a more efficient system.
 </details>
 
+# Active Directory Homelab Project
+
+![Active Directory Homelab](https://i.imgur.com/rDYFHff.png)
+<br><br>
+![Active Directory Homelab2](https://i.imgur.com/hGfReqr.png)
+
+## Conclusion
+
+In this dynamic Homelab project, we embarked on a journey to create a virtual environment that simulates a mini corporate setup. Through the orchestration of a Windows Server 2019 Domain Controller and a Windows 10 Client using VirtualBox, we ventured into the complexities of network management and system administration.
+
+Our Active Directory Homelab architecture consisted of essential components:
+
+- **VirtualBox:** Laying the foundation for creating and managing virtual machines, enabling realistic scenario simulation.
+- **Windows Server 2019:** As the Domain Controller, it managed users, devices, and policies, forming the core of Active Directory Domain Services.
+- **Windows 10:** Representing an employee workstation, it provided insights into the corporate end-user experience.
+- **Network Interfaces:** Enabling communication, with distinct connections for internet access and internal network interaction.
+- **Active Directory Domain Services:** Crucial for user and network organization, ensuring coherent structuring of users, computers, and resources.
+- **DHCP:** Streamlined IP address assignment, simplifying network configuration.
+- **RAS/NAT:** Facilitated seamless internal-external network connectivity.
+- **Python Script:** Brought automation and customization, enhancing user creation.
+- **Group Policy Object:** Enforced network-wide policies, maintained settings, security, and access controls.
+
+This project allowed us to explore various aspects of network administration and system management:
+
+- **NIC Configurations:** We configured network interfaces, establishing distinct connections for internal and external communication.
+- **Installing AD DS:** Active Directory Domain Services were installed and configured, forming the backbone of our domain management.
+- **Creating Users and OUs:** We learned to create organizational units, add users, and grant administrative privileges for effective user management.
+- **DHCP Setup:** Dynamic Host Configuration Protocol simplified IP assignment, enabling smoother network integration.
+- **RAS/NAT Configuration:** Network Address Translation empowered internal devices to access the internet using a single public IP.
+- **Joining the Domain:** The Windows 10 Client was successfully joined to the domain, ensuring seamless interaction with our network.
+- **User Automation:** With a Python script, we automated user creation, enhancing efficiency and customization.
+- **Group Policy Configuration:** We explored Group Policy configurations, implementing security practices and access controls network-wide.
+
+Throughout this endeavor, we've crafted a comprehensive environment that mirrors the complexities of a corporate network. By mastering these tools and techniques, we've honed our skills in network management and system administration. This Homelab project offers a rich platform for experimentation, learning, and refinement, providing a valuable experience for anyone aspiring to excel in the realm of IT infrastructure.
+
+
 
 
 
