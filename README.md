@@ -196,7 +196,7 @@ Collectively, these tools and architectural elements culminate in an environment
 </details>
 
 <details>
-  <summary><h2><b>Section 5: INSTALL & CONFIGURE NETWORK ADDRESS TRANSLATION (NAT)</b></h2></summary>
+  <summary><h2><b>Section 5: INSTALL & CONFIGURE NAT</b></h2></summary>
   <br><br>
   
   In this section, we'll focus on installing and configuring Network Address Translation (NAT), a technique that enables devices within our internal network to access the external internet while using a single public IP address.<br><br>
