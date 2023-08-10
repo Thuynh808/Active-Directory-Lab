@@ -437,46 +437,46 @@ for line in lines:
   
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
-    - Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy
-      - Account Lockout Policy:
-        - Set account lockout threshold to 3 attempts
-        - Other Account Lockout Policies will be changed to suggested values <br><br>
+   - Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy
+     - Account Lockout Policy:
+      - Set account lockout threshold to 3 attempts
+      - Other Account Lockout Policies will be changed to suggested values <br><br>
   
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
 
-    - Computer Configuration > Administrative Templates > System 
-      - Turn off forced restart. (Good Practice: Avoids unwanted restarts<br><br>
+  - Computer Configuration > Administrative Templates > System 
+    - Turn off forced restart. (Good Practice: Avoids unwanted restarts<br><br>
 
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
       
-    - Computer Configuration > Administrative Templates > All Settings:
-        - Prohibit user installs. (Good Practice: Limits unauthorized software installation)<br><br>
+  - Computer Configuration > Administrative Templates > All Settings:
+    - Prohibit user installs. (Good Practice: Limits unauthorized software installation)<br><br>
 
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
-    - Computer Configuration > Administrative Templates > Windows Components > Store
-      - Turn off the Store application. (Good Practice: Controls software sources.)<br><br>
+  - Computer Configuration > Administrative Templates > Windows Components > Store
+    - Turn off the Store application. (Good Practice: Controls software sources.)<br><br>
         
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
 
-    - Computer Configuration > Administrative Templates > Windows Components > OneDrive 
-      - Prevent the usage of OneDrive for file storage. (Good Practice: Enhances data control.)<br><br>
+  - Computer Configuration > Administrative Templates > Windows Components > OneDrive 
+    - Prevent the usage of OneDrive for file storage. (Good Practice: Enhances data control.)<br><br>
   
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
     
-    - User Configuration:
-      - Administrative Templates > Control Panel:
-        - Prohibit access to the Control Panel (Good Practice: Prevents unauthorized system changes)<br><br>
+- User Configuration:
+  - Administrative Templates > Control Panel:
+    - Prohibit access to the Control Panel (Good Practice: Prevents unauthorized system changes)<br><br>
         
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
-      - Administrative Templates > System:
-        - Prevent access to the command prompt (Good Practice: Reduces misuse risks)
+    - Administrative Templates > System:
+      - Prevent access to the command prompt (Good Practice: Reduces misuse risks)
         
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
   
-      - Administrative Templates > System > Removable Storage Access:
-        - All Removable Storage classes: Deny all access (Good Practice: Prevents data leakage)<br><br>
+    - Administrative Templates > System > Removable Storage Access:
+      - All Removable Storage classes: Deny all access (Good Practice: Prevents data leakage)<br><br>
         
   ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
         
