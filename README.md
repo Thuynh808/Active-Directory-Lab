@@ -297,34 +297,48 @@ Collectively, these tools and architectural elements culminate in an environment
   <summary>Create_AD_Users.py (Click here to view)</summary>
   
   ```python
-   from pyad import *
+# This will import everything from the pyad module
+from pyad import *
 
-  pyad.set_defaults(ldap_server="10.2.22.1", username="thuynh@streetrack.com", password="Cyberlab123!")
-  ou = pyad.adcontainer.ADContainer.from_dn("OU=_USERS,DC=Streetrack,DC=com")
+# Here, we'llset the default connection parameters for the Active Directory server
+pyad.set_defaults(ldap_server="10.2.22.1", username="thuynh@streetrack.com", password="Cyberlab123!")
 
-  with open('my_users_list.txt', 'r') as file:
-      lines = file.readlines()
+# This line will create a container object for the "_USERS" Organizational Unit (OU)
+ou = pyad.adcontainer.ADContainer.from_dn("OU=_USERS,DC=Streetrack,DC=com")
 
-  for line in lines:
-      first_name, last_name = line.strip().split()
-      username = first_name[0].upper() + last_name.lower()
-      
-      try:
-          user = pyad.aduser.ADUser.create(username, ou)
-          
-          user.update_attribute('displayName', f"{first_name} {last_name}")
-          user.update_attribute('sAMAccountName', username)
-          user.update_attribute('givenName', first_name)
-          user.update_attribute('sn', last_name)
-          
-          password = "Cyberlab123!"
-          user.set_password(password)
-          
-          print(f"Users {username} created successfully.")
-          
-      except Exception as e:
-          print(f"Error creating users {username}: {str(e)}")
-  ```
+# This will open the my_users_list text file and read its lines into the 'lines' variable
+with open('my_users_list.txt', 'r') as file:
+    lines = file.readlines()
+
+# Iterate through each line in the 'lines' list
+for line in lines:
+    # Here, we split the line into 'first_name' and 'last_name'
+    first_name, last_name = line.strip().split()
+    
+    # Create a username by capitalizing the first letter of 'first_name' and making 'last_name' lowercase
+    username = first_name[0].upper() + last_name.lower()
+    
+    try:
+        # This line will create the Active Directory user with the 'username' and 'ou' specified
+        user = pyad.aduser.ADUser.create(username, ou)
+        
+        # These updates will give the various attributes of the user
+        user.update_attribute('displayName', f"{first_name} {last_name}")
+        user.update_attribute('sAMAccountName', username)
+        user.update_attribute('givenName', first_name)
+        user.update_attribute('sn', last_name)
+        
+        # And now, the user's password
+        password = "Cyberlab123!"
+        user.set_password(password)
+        
+        # This line will print a success message
+        print(f"User {username} created successfully.")
+        
+    except Exception as e:
+        # This will print an error message if an exception occurs and will help with error handling. 
+        print(f"Error creating user {username}: {str(e)}")
+
   </details>
   
    - A Python script to create Users from the My_users_list.txt file
