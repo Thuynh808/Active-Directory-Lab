@@ -410,20 +410,20 @@ for line in lines:
   - Open "Server Manager" on the Windows Server 2019.
   - Click "Tools" > "Group Policy Management."<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 82](https://i.imgur.com/hPri6r2.png)<br><br>
   
   **Step 2: Create a New Group Policy Object (GPO):**
   - Right-click on the "Group Policy Objects" container and select "New."
   - We're going to name the GPO "Homelab Users GPO"<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 83](https://i.imgur.com/gA7abT1.png)<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 84](https://i.imgur.com/ZtkDWFo.png)<br><br>
   
   **Step 3: Edit GPO Settings:**
   - Right-click on the newly created GPO and select "Edit."<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 85](https://i.imgur.com/wRANEkt.png)<br><br>
   
   - After selecting "Edit," navigate to the following path within the editor:
     
@@ -433,74 +433,74 @@ for line in lines:
         - Enable "Password must meet complexity requirements."
         - Set minimum password length to 14 characters.<br><br>
         
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 86](https://i.imgur.com/o70pjTw.png)<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 87](https://i.imgur.com/CXQg0dV.png)<br><br>
   
    - Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy
      - Account Lockout Policy:
       - Set account lockout threshold to 3 attempts
       - Other Account Lockout Policies will be changed to suggested values <br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 88](https://i.imgur.com/pOqc2nW.png)<br><br>
 
   - Computer Configuration > Administrative Templates > System 
     - Turn off forced restart. (Good Practice: Avoids unwanted restarts<br><br>
 
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 89](https://i.imgur.com/nnhopXN.png)<br><br>
       
   - Computer Configuration > Administrative Templates > All Settings:
     - Prohibit user installs. (Good Practice: Limits unauthorized software installation)<br><br>
 
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 90](https://i.imgur.com/nIo4EHC.png)<br><br>
   
   - Computer Configuration > Administrative Templates > Windows Components > Store
     - Turn off the Store application. (Good Practice: Controls software sources.)<br><br>
         
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 91](https://i.imgur.com/H4SJGTe.png)<br><br>
 
   - Computer Configuration > Administrative Templates > Windows Components > OneDrive 
     - Prevent the usage of OneDrive for file storage. (Good Practice: Enhances data control.)<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 92](https://i.imgur.com/oBgG0nj.png)<br><br>
     
 - User Configuration:
   - Administrative Templates > Control Panel:
     - Prohibit access to the Control Panel (Good Practice: Prevents unauthorized system changes)<br><br>
         
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 93](https://i.imgur.com/S4bzHwt.png)<br><br>
   
     - Administrative Templates > System:
       - Prevent access to the command prompt (Good Practice: Reduces misuse risks)
         
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 94](https://i.imgur.com/BVA8llG.png)<br><br>
   
     - Administrative Templates > System > Removable Storage Access:
       - All Removable Storage classes: Deny all access (Good Practice: Prevents data leakage)<br><br>
         
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 95](https://i.imgur.com/Qj7QsSw.png)<br><br>
         
   **Step 4: Apply GPO to "_USERS" OU:**
   - Go back to Group Policy Management
   - Right-click on the "_USERS" OU and select "Link an Existing GPO."
   - Choose the GPO we've created (Homelab Users GPO) and link it to the "_USERS" OU.<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 96](https://i.imgur.com/BYugf90.png)<br><br>
 
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 97](https://i.imgur.com/SERQGPT.png)<br><br>
   
   **Step 5: Force Group Policy Update:**
   - On the client machine, open a Command Prompt as an administrator.
   - Run the command: `gpupdate /force`<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 98](https://i.imgur.com/8MN86eY.png)<br><br>
   
   **Step 6: Test GPO Effects:**
   - Verify that the applied GPO settings are in effect on the client machine.<br><br>
   
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 99](https://i.imgur.com/J6eEOLm.png)<br><br>
 
-  ![Image 26](https://i.imgur.com/9uBKp7F.png)<br><br>
+  ![Image 100](https://i.imgur.com/5TfBer6.png)<br><br>
   
   Group Policy configurations offer a structured way to manage and enforce consistent settings, security policies, and access controls. By effectively using GPOs, we can enhance the security and organization of the network, creating a more efficient system.
 </details>
