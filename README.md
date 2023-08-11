@@ -445,38 +445,37 @@ for line in lines:
   ![Image 88](https://i.imgur.com/pOqc2nW.png)<br><br>
 
   - Computer Configuration > Administrative Templates > System 
-    - Turn off forced restart. (Good Practice: Avoids unwanted restarts<br><br>
+    - Turn off forced restart. (Good Practice: Avoids unwanted restarts, preventing interruptions and data loss)<br><br>
 
   ![Image 89](https://i.imgur.com/nnhopXN.png)<br><br>
       
   - Computer Configuration > Administrative Templates > All Settings:
-    - Prohibit user installs. (Good Practice: Limits unauthorized software installation)<br><br>
+    - Prohibit user installs. (Good Practice: Limits unauthorized software installation to maintain control over applications running on the network)<br><br>
 
   ![Image 90](https://i.imgur.com/nIo4EHC.png)<br><br>
   
   - Computer Configuration > Administrative Templates > Windows Components > Store
-    - Turn off the Store application. (Good Practice: Controls software sources.)<br><br>
+    - Turn off the Store application. (Good Practice: Controls software sources by disabling the Microsoft Store application)<br><br>
         
   ![Image 91](https://i.imgur.com/H4SJGTe.png)<br><br>
 
   - Computer Configuration > Administrative Templates > Windows Components > OneDrive 
-    - Prevent the usage of OneDrive for file storage. (Good Practice: Enhances data control.)<br><br>
+    - Prevent the usage of OneDrive for file storage. (Good Practice: Enhances data control by preventing accidental or unauthorized data exposure)<br><br>
   
   ![Image 92](https://i.imgur.com/oBgG0nj.png)<br><br>
     
-- User Configuration:
-  - Administrative Templates > Control Panel:
-    - Prohibit access to the Control Panel (Good Practice: Prevents unauthorized system changes)<br><br>
+  - User Configuration > Administrative Templates > Control Panel:
+    - Prohibit access to the Control Panel (Good Practice: Prevents unauthorized system changes and helps maintain a consistent and secure enviroment)<br><br>
         
   ![Image 93](https://i.imgur.com/S4bzHwt.png)<br><br>
   
-    - Administrative Templates > System:
-      - Prevent access to the command prompt (Good Practice: Reduces misuse risks)
+  - User Configuration > Administrative Templates > System:
+    - Prevent access to the command prompt (Good Practice: Reduces misuse risks by preventing users from running commmands that might cause unintended damage or securtiy breach)<br><br>
         
   ![Image 94](https://i.imgur.com/BVA8llG.png)<br><br>
   
-    - Administrative Templates > System > Removable Storage Access:
-      - All Removable Storage classes: Deny all access (Good Practice: Prevents data leakage)<br><br>
+  - User Configuration > Administrative Templates > System > Removable Storage Access:
+    - All Removable Storage classes: Deny all access (Good Practice: Prevents data leakage by preventing unauthorized copying or transfering sensitive data onto external devices)<br><br>
         
   ![Image 95](https://i.imgur.com/Qj7QsSw.png)<br><br>
         
