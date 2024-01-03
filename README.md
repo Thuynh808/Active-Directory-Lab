@@ -1,13 +1,13 @@
-# Active Directory Homelab Project
+# Active Directory Lab Project
 
-![Active Directory Homelab](https://i.imgur.com/rDYFHff.png)
+![Active Directory lab](https://i.imgur.com/mCz35nj.png)
 <br><br>
-![Active Directory Homelab2](https://i.imgur.com/hGfReqr.png)
+![Active Directory lab2](https://i.imgur.com/NDN69mG.png)
 
 
 ## Introduction
 
-Welcome to my dynamic Homelab project, where I'll be crafting a virtual environment to simulate a mini corporate setup. Through VirtualBox, I've orchestrated two key players: a Windows Server 2019 Domain Controller and a Windows 10 Client. The Domain Controller stands as the authority figure, managing the digital domain, while the Windows 10 Client plays the role of an employee navigating within this intricate network. As I dive into configuring network interfaces, my aim is to create a functional small-scale representation that reflects the complexities of a real-world corporate IT environment. Join me as I navigate the details of this Homelab journey, aiming to create a rich learning experience in network management and system administration.
+Welcome to my dynamic Homelab project, where I'll be crafting a virtual environment to simulate a mini corporate setup. Through VirtualBox, I've orchestrated two key players: a Windows Server 2019 Domain Controller and a Windows 10 Client. The Domain Controller stands as the authority figure, managing the digital domain, while the Windows 10 Client plays the role of an employee navigating within this intricate network. As I dive into configuring network interfaces, my aim is to create a functional small-scale representation that reflects the complexities of a real-world corporate IT environment. Join me as I navigate the details of this lab journey, aiming to create a rich learning experience in network management and system administration.
 
 
 The Active Directory Homelab architecture includes:
@@ -505,11 +505,11 @@ for line in lines:
 </details>
 
 <br><br>
-___
+
 
 ## Conclusion
 
-In this dynamic Homelab project, we embarked on a journey to create a virtual environment that simulates a mini corporate setup. Through the orchestration of a Windows Server 2019 Domain Controller and a Windows 10 Client using VirtualBox, we ventured into the complexities of network management and system administration.
+In this dynamic lab project, we embarked on a journey to create a virtual environment that simulates a mini corporate setup. Through the orchestration of a Windows Server 2019 Domain Controller and a Windows 10 Client using VirtualBox, we ventured into the complexities of network management and system administration.
 
 This project allowed us to explore various aspects of network administration and system management:
 
@@ -522,7 +522,7 @@ This project allowed us to explore various aspects of network administration and
 - **User Automation:** With a Python script, we automated user creation, enhancing efficiency and customization.
 - **Group Policy Configuration:** We explored Group Policy configurations, implementing security practices and access controls network-wide.
 
-Throughout this endeavor, we've crafted a comprehensive environment that mirrors the complexities of a corporate network. By mastering these tools and techniques, we've honed our skills in network management and system administration. This Homelab project offers a rich platform for experimentation, learning, and refinement, providing a valuable experience for anyone aspiring to excel in the realm of IT infrastructure.
+Throughout this endeavor, we've crafted a comprehensive environment that mirrors the complexities of a corporate network. By mastering these tools and techniques, we've honed our skills in network management and system administration. This lab project offers a rich platform for experimentation, learning, and refinement, providing a valuable experience for anyone aspiring to excel in the realm of IT infrastructure.
 
 
 
