@@ -47,7 +47,7 @@ The lab emphasizes how directory services depend on networking fundamentals and 
 | DHCP               | Automated IP address assignment for clients                 |
 | RAS/NAT            | Optional routing for internal-to-external connectivity      |
 | OUs + Groups       | Identity and policy scoping structure                       |
-| Python + pyad      | Bulk user provisioning via LDAP                             |
+| Python + pyad      | Bulk user provisioning in Active Directory                  |
 | GPO                | Centralized enforcement of security and workstation controls|
 
 ## Workflow
@@ -531,7 +531,7 @@ Detailed walkthrough steps are provided below in collapsed sections.
 **Validated outcomes:**
 
 * Domain identity services function correctly
-  * Domain Controller provides Active Directory, DNS, and authentication services
+  * Domain Controller provides Active Directory Domain Services (AD DS), DNS, and authentication services
   * Internal DNS supports domain join and authentication workflows
 * Client networking and domain enrollment are successful
   * Client receives network configuration via DHCP
@@ -548,7 +548,7 @@ Detailed walkthrough steps are provided below in collapsed sections.
 
 ## Summary
 
-This Active Directory lab demonstrates foundational enterprise identity concepts by deploying a functional domain environment with DNS, DHCP, Group Policy, and domain-joined client validation. The focus is on understanding dependencies, implementing core services correctly, and proving behavior from the workstation perspective rather than treating Active Directory as a standalone configuration exercise.
+This project presents a complete Active Directory lab demonstrating how identity services are deployed and validated within a small Windows-based infrastructure. The environment includes a Domain Controller providing AD DS, DNS, DHCP, and Group Policy, along with a domain-joined client used to verify authentication, policy enforcement, and network behavior from the workstation perspective. Automation is included to reduce repetitive administrative tasks and validate directory interactions at scale.
 
 
 
